@@ -1,0 +1,14 @@
+{
+  "extends": "react-static/.babelrc",
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      },
+      "transform-es2015-modules-commonjs"
+    ]
+  ],
+  presets: ["env", "react"]
+}

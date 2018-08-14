@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - stable
+cache:
+  directories:
+    - node_modules
+before_deploy:
+  - npm run build:ci
+  - pip install --user awscli
+  - ./scripts/clean_bucket.sh
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: $AWS_BUCKET_NAME
+    local_dir: dist
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID_DEV
+    secret_access_key: $AWS_SECRET_ACCESS_KEY_DEV
+    bucket: $AWS_BUCKET_NAME_DEV
+    local_dir: dist
+    skip_cleanup: true
+    on:
+      branch: develop
+script:
+  - npm run test:prod
+after_script:
+  - npm run coveralls
