@@ -11,8 +11,8 @@ then
 elif [ "$TRAVIS_BRANCH" = "master" ]
 then
   echo "Invalidating CloudFront Cache"
-  aws configure set preview.cloudfront true
-  aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  #aws configure set preview.cloudfront true
+  #aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
   echo "Clearing Production Bucket Prior To Deployment (Leaving Discord and Telegram redirects)"
   aws s3 rm s3://blog.marketprotocol.io --recursive
 else
