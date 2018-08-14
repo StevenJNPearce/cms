@@ -2,9 +2,9 @@
 
 [![Build Status](https://api.travis-ci.org/MARKETProtocol/blog.svg?branch=master)](https://travis-ci.org/MARKETProtocol/blog) [![Coverage Status](https://coveralls.io/repos/github/MARKETProtocol/blog/badge.svg?branch=master)](https://coveralls.io/github/MARKETProtocol/blog?branch=master)
 
-# Blog
+# CMS
 
-This repository contains code related to the blog to be hosted at blog.marketprotocol.io
+This repository contains code related to the blog to be hosted at cms.marketprotocol.io
 
 Join our [Discord Community](https://marketprotocol.io/discord) to interact with members of our dev staff and other contributors.
 
