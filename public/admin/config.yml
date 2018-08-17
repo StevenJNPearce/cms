@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: MARKETProtocol/blog
-  branch: master # Branch to update (optional; defaults to master)
+  repo: MARKETProtocol/cms
+  branch: develop # Branch to update (optional; defaults to master)
   base_url: https://ghub-auth.herokuapp.com
 
 publish_mode: editorial_workflow
@@ -19,8 +19,8 @@ collections:
             # Remove any that aren't needed for posts
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["About", "Trading", "Dex", "Partnerships", "Development", "Team", "Cryptocurrency", "Oracle"]}
       - {label: "Published", name: "published_at", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["About", "Trading", "Dex", "Partnerships", "Development", "Team", "Cryptocurrency"]}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "press" # Used in routes, e.g., /admin/collections/blog
@@ -33,7 +33,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Published", name: "published_at", widget: "datetime"}
-      - {label: "Link to article", name: "article_link", widget: "string"}
+      - {label: "Read Article", name: "article_link", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
 
