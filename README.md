@@ -1,6 +1,6 @@
 <img src="https://github.com/MARKETProtocol/dApp/blob/master/src/img/MARKETProtocol-Light.png?raw=true" align="middle">
 
-[![Build Status](https://api.travis-ci.org/MARKETProtocol/blog.svg?branch=master)](https://travis-ci.org/MARKETProtocol/blog) [![Coverage Status](https://coveralls.io/repos/github/MARKETProtocol/blog/badge.svg?branch=master)](https://coveralls.io/github/MARKETProtocol/blog?branch=master)
+[![Build Status](https://api.travis-ci.org/MARKETProtocol/cms.svg?branch=master)](https://travis-ci.org/MARKETProtocol/cms) [![Coverage Status](https://coveralls.io/repos/github/MARKETProtocol/cms/badge.svg?branch=master)](https://coveralls.io/github/MARKETProtocol/cms?branch=master)
 
 # CMS
 
