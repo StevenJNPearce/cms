@@ -171,7 +171,7 @@ class MarketFooter extends React.Component {
               </FooterLink>
               <FooterLink>
                 <Link
-                  to="/token-interest"
+                  to="https://marketprotocol.io/token-interest"
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   Token Interest
@@ -238,7 +238,7 @@ class MarketFooter extends React.Component {
               <HeaderText>Organization</HeaderText>
               <FooterLink>
                 <Link
-                  to="/team"
+                  to="https://marketprotocol.io/team"
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   Team
@@ -246,7 +246,7 @@ class MarketFooter extends React.Component {
               </FooterLink>
               <FooterLink>
                 <Link
-                  to="/partners"
+                  to="https://marketprotocol.io/partners"
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   Partners
@@ -254,7 +254,7 @@ class MarketFooter extends React.Component {
               </FooterLink>
               <FooterLink>
                 <Link
-                  to="/jobs"
+                  to="https://marketprotocol.io/jobs"
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   Jobs (We're hiring!)

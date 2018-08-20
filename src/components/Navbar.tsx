@@ -182,7 +182,7 @@ const whitepapers: LinkInterface[] = [
   {
     key: '/whitepaper',
     label: 'Web Version',
-    url: '/whitepaper'
+    url: 'https://marketprotocol.io/whitepaper'
   }
 ];
 
@@ -260,14 +260,17 @@ class Navbar extends React.Component {
       >
         <Menu.Item key="/about">
           <Link
-            to="/about"
+            to="https://marketprotocol.io/about"
             style={{ color: 'inherit', textDecoration: 'none' }}
           >
             About
           </Link>
         </Menu.Item>
         <Menu.Item key="/team">
-          <Link to="/team" style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link
+            to="https://marketprotocol.io/team"
+            style={{ color: 'inherit', textDecoration: 'none' }}
+          >
             Team
           </Link>
         </Menu.Item>
@@ -289,18 +292,9 @@ class Navbar extends React.Component {
         <StyledSubMenu title={'Whitepaper'} trigger={'click'}>
           {whitepaperLinks}
         </StyledSubMenu>
-        {/*<Menu.Item key="/faq">*/}
-        {/*<Link*/}
-        {/*to="https://docs.marketprotocol.io/#faq-general"*/}
-        {/*style={{ color: 'inherit', textDecoration: 'none' }}*/}
-        {/*target="_blank"*/}
-        {/*>*/}
-        {/*FAQs*/}
-        {/*</Link>*/}
-        {/*</Menu.Item>*/}
         <Menu.Item key="/partners">
           <Link
-            to="/partners"
+            to="https://marketprotocol.io/partners"
             style={{ color: 'inherit', textDecoration: 'none' }}
           >
             Partners
@@ -316,7 +310,7 @@ class Navbar extends React.Component {
         </Menu.Item>
         <Menu.Item key="/token-interest">
           <Link
-            to="/token-interest"
+            to="https://marketprotocol.io/token-interest"
             style={{ color: 'inherit', textDecoration: 'none' }}
           >
             Token Interest
