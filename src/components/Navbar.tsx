@@ -332,9 +332,9 @@ class Navbar extends React.Component {
           <Header>
             <Logo>
               <Link
-                to="/"
+                to="https://marketprotocol.io"
                 style={{ color: 'inherit', textDecoration: 'none' }}
-                onClick={() => this.handleClick('/')}
+                onClick={() => this.handleClick('https://marketprotocol.io')}
               >
                 <img
                   alt="Decentralized derivatives and exchange"

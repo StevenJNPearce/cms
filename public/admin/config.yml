@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: MARKETProtocol/cms
-  branch: develop # Branch to update (optional; defaults to master)
   base_url: https://ghub-auth.herokuapp.com
 
 publish_mode: editorial_workflow

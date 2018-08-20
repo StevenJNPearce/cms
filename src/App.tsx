@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from 'react-static';
+import { Redirect, Router } from 'react-static';
 import { Helmet } from 'react-helmet';
 import { injectGlobal } from 'styled-components';
 import { hot } from 'react-hot-loader';
@@ -91,6 +91,7 @@ class App extends React.Component {
           </Helmet>
           <Navbar />
           <Content style={{ background: '#FFFFFF', width: '100%' }}>
+            <Redirect to={'/blog'} />
             <Routes />
           </Content>
           <Popup />

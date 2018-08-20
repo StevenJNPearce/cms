@@ -15,7 +15,7 @@ describe('<Navbar />', () => {
     const component = shallow(<Navbar />);
     expect(component.find(Logo)).to.have.length(1);
     const logoLink = component.find(Logo).find(Link);
-    expect(logoLink.props().to).to.equal('/');
+    expect(logoLink.props().to).to.equal('https://marketprotocol.io');
     const logoImageProps = logoLink.find('img').props();
 
     expect(logoImageProps.alt).to.equal('Decentralized derivatives and exchange');
@@ -27,7 +27,7 @@ describe('<Navbar />', () => {
     const component = shallow(<Navbar />);
     const logoLink = component.find(Logo).find(Link);
     logoLink.simulate('click');
-    expect(component.state().current).to.equal('/');
+    expect(component.state().current).to.equal('https://marketprotocol.io');
   });
 
   it('renders Popover', () => {
