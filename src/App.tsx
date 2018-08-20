@@ -91,7 +91,6 @@ class App extends React.Component {
           </Helmet>
           <Navbar />
           <Content style={{ background: '#FFFFFF', width: '100%' }}>
-            <Redirect to={'/blog'} />
             <Routes />
           </Content>
           <Popup />
