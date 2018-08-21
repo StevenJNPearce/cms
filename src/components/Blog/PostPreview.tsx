@@ -5,7 +5,8 @@ import Dotdotdot from 'react-dotdotdot';
 import showdown from 'showdown';
 import { History } from 'history';
 import { device } from '@src/breakpoints';
-
+import remark from 'remark';
+import strip from 'strip-markdown';
 import SocialLinks from './SocialLinks';
 
 const converter = new showdown.Converter();
@@ -141,30 +142,6 @@ class PostPreview extends React.Component<PostPreviewProps> {
     super(props);
 
     this.goto = this.goto.bind(this);
-    this.createMarkup = this.createMarkup.bind(this);
-  }
-
-  createMarkup(body: object, markup: HTMLElement) {
-    const content = [];
-    const sibling = body.firstElementChild.nextElementSibling;
-    const textLength = 177;
-    content.push(markup);
-
-    if (markup.textContent.length <= textLength) {
-      if (sibling.innerText.length >= textLength) {
-        sibling.innerText = sibling.innerText.substring(0, textLength) + '...';
-      } else {
-        sibling.innerText = sibling.innerText + '...';
-      }
-
-      content.push(sibling);
-    } else {
-      markup.textContent = markup.textContent.substring(0, textLength) + '...';
-    }
-
-    return content.length > 1
-      ? content[0].outerHTML + content[1].outerHTML
-      : content[0].outerHTML;
   }
 
   goto(slug: string) {
@@ -178,12 +155,10 @@ class PostPreview extends React.Component<PostPreviewProps> {
       return null;
     }
 
-    const parser = new DOMParser();
-    const htmlString = converter.makeHtml(post.content);
-    const html = parser.parseFromString(htmlString, 'text/html');
-    const intro = html.body.firstElementChild;
     const slug = `/blog/post/${post.data.slug}`;
-    const markup = this.createMarkup(html.body, intro as HTMLElement);
+    const markup = remark()
+      .use(strip)
+      .processSync(post.content).contents;
 
     return (
       <RootWrap>
@@ -217,7 +192,7 @@ class PostPreview extends React.Component<PostPreviewProps> {
             }}
             id="blogContent"
           >
-            <div dangerouslySetInnerHTML={{ __html: markup }} />
+            <Dotdotdot clamp={3}>{markup}</Dotdotdot>
           </div>
           <div id="blogActions">
             <div id="blogLink">

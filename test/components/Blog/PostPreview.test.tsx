@@ -9,7 +9,7 @@ const converter = new showdown.Converter();
 
 describe('<PostPreview />', () => {
   const samplePost = {
-    content: `MARKET Protocol provides an opportunity for crypto holders to gain exposure to both real-world 
+    content: `MARKET Protocol provides an opportunity for crypto holders to gain exposure to both real-world
       and digital assets through derivatives using crypto-based assets as collateral on the Ethereum blockchain.`,
     data: {
       author: 'Mary Jane',
@@ -54,23 +54,6 @@ describe('<PostPreview />', () => {
     expect(instance.props.history.length).toBe(3);
   });
 
-  it('creates markup for preview', () => {
-    const c = mount(<PostPreview post={samplePost} />);
-    const textLength = 177;
-    const instance = c.instance();
-
-    const parser = new DOMParser();
-    const htmlString = converter.makeHtml(samplePost.content);
-    const html = parser.parseFromString(htmlString, 'text/html');
-    const intro = html.body.firstElementChild;
-
-    const markup = instance.createMarkup(html.body, intro);
-    const truncatedText = samplePost.content.substring(0, textLength) + '...';
-
-    expect(markup).toEqual(`<p>${truncatedText}</p>`);
-  });
-
-
   it('renders nothing if post prop is undefined', () => {
     const c = shallow(<PostPreview post={undefined}/>);
     expect(c.render().text()).toEqual('');
@@ -84,6 +67,11 @@ describe('<PostPreview />', () => {
   it('renders the title', () => {
     const titleC = postPreview.children().find('#blogTitle');
     expect(titleC.render().text()).toEqual(samplePost.data.title);
+  });
+
+  it('renders the content preview', () => {
+    const contentC = postPreview.children().find('#blogContent');
+    expect(contentC.render().text().trim()).toEqual(samplePost.content);
   });
 
   it('renders the publish date', () => {
