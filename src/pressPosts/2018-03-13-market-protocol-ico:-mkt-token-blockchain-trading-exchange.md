@@ -1,5 +1,6 @@
 ---
 title: 'Market Protocol ICO: MKT Token Blockchain Trading Exchange?'
+author: MARKET Protocol
 published_at: '2018-03-13T00:00:00-07:00'
 article_link: 'https://bitcoinexchangeguide.com/market-protocol-ico/'
 thumbnail: /uploads/bitcoin-exchange-guide.png
