@@ -3,7 +3,7 @@ title: >-
   ChainLink to help secure MARKET Protocol smart contracts for complex
   derivatives
 author: MARKET Protocol
-published_at: '2018-08-27T08:51:45-05:00'
+published_at: '2018-08-23T08:51:45-05:00'
 article_link: >-
   https://www.cryptoninjas.net/2018/08/23/chainlink-to-help-secure-market-protocol-smart-contracts-for-complex-derivatives/
 thumbnail: /uploads/cryptoninjas.png
