@@ -36,7 +36,9 @@ const PostItemContainer = styled.div`
   background-color: #fff;
   box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.05);
   transition: all 300ms;
-
+  @media screen and (max-width: ${size.tabletL}) {
+    width: 100%;
+  }
   > #root {
     display: flex;
     flex-direction: column;

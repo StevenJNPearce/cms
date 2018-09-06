@@ -194,6 +194,9 @@ const PostListContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media screen and (max-width: ${size.tabletL}) {
+    flex-direction: column;
+  }
 `;
 const BlogContent = styled.div`
   font-weight: 400;
